@@ -14,7 +14,7 @@ load_dotenv(env_file)
 app = FastAPI(title="AI Email Generator", version="0.1.0")
 handlers = Handlers()
 
-@app.post("/generate_email")
+@app.post("/email")
 async def generate_email(request: EmailRequest) -> EmailResponse:
     try:
         logging.info("Received request for email generation")
